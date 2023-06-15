@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Produção</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <img id="companyLogo" src="logoempresa.png" alt="Logotipo da Empresa" />
+            <h1>Contador de Produção</h1>
+        </header>
+        <main id="mainContainer">
+            <div class="input-group">
+                <label for="operatorName">Operador:</label>
+                <input type="text" id="operatorName" placeholder="Nome do operador">
+            </div>
+            <div class="input-group">
+                <label for="stationSelect">Estação:</label>
+                <select id="stationSelect">
+                    <option value="1">Estação 1</option>
+                    <option value="2">Estação 2</option>
+                    <option value="3">Estação 3</option>
+                    <option value="4">Estação 4</option>
+                    <option value="5">Estação 5</option>
+                    <option value="6">Estação 6</option>
+                    <option value="7">Estação 7</option>
+                    <option value="8">Estação 8</option>
+                    <option value="9">Estação 9</option>
+                    <option value="10">Estação 10</option>
+                </select>
+            </div>
+            <div id="counter">Contagens: 0</div>
+            <div id="timer">00m:00s:000ms</div>
+            <div class="button-group">
+                <button id="startButton">Iniciar</button>
+                <button id="pauseButton" disabled>Pausar</button>
+                <button id="continueButton" disabled>Continuar</button>
+                <button id="stopButton" disabled>Parar</button>
+            </div>
+            <button id="lapButton" class="round-button">Volta</button>
+            <div class="button-group">
+                <button id="exportButton">Exportar</button>
+            </div>
+            <div id="timeListContainer"></div>
+            <div id="lapTimesContainer"></div>
+            <div id="statsContainer">
+                <span class="stats-label">Média:</span>
+                <span id="averageTime" class="stats-value">0s</span>
+                <span class="stats-label">Mínimo:</span>
+                <span id="minTime" class="stats-value">0s</span>
+                <span class="stats-label">Máximo:</span>
+                <span id="maxTime" class="stats-value">0s</span>
+            </div>
+        </main>
+        <footer>
+            <img src="logofundo.png" alt="Barra" />
+        </footer>
+    </div>
+</body>
+</html>
